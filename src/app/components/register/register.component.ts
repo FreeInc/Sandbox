@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { regexpPatterns } from '../../shared/patterns';
+
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -7,10 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  pattern = regexpPatterns;
+
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   registerUser(form) {
     console.log('form:', form.value);
